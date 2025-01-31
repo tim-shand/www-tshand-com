@@ -1,0 +1,123 @@
+baseurl: https://tshand.com/
+languageCode: en-us
+theme: hugo-theme-stack-master
+title: Tim Shand
+copyright: Tim Shand
+services:
+    # GA Tracking ID
+    googleAnalytics:
+        id:
+pagination:
+    pagerSize: 3
+colorScheme:
+    toggle: true # Display toggle
+    default: auto # Available values: auto, light, dark
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
+params:
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon: /favicon.ico
+    footer:
+        #since: 2020
+        #customText:
+    dateFormat:
+        published: Jan 02, 2006
+        lastUpdated: Jan 02, 2006 15:04 MST
+    enableEmoji: true
+    sidebar:
+        #emoji:
+        subtitle: Hi, I'm Tim!
+        avatar:
+            enabled: true
+            local: true
+            #src: img/logo_800x800.png
+            #src: img/logo-no-background.png
+            src: img/logo-color.png
+    article:
+        math: false
+        toc: true
+        readingTime: true
+        license:
+            enabled: false
+            default: Licensed under CC BY-NC-SA 4.0
+    comments:
+        enabled: false
+        #provider: disqus
+    widgets:
+        homepage:
+            - type: search
+            - type: archives
+              params:
+                  limit: 5
+            - type: categories
+              params:
+                  limit: 10
+            - type: tag-cloud
+              params:
+                  limit: 10
+        page:
+            - type: toc
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main: []
+    social:
+        - identifier: github
+          name: GitHub
+          url: https://github.com/tim-shand
+          params:
+              icon: brand-github
+        - identifier: linkedin
+          name: LinkedIn
+          url: https://www.linkedin.com/in/tshandnz
+          params:
+              icon: brand-linkedin
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+markup:
+    goldmark:
+        extensions:
+            passthrough:
+                enable: true
+                delimiters:
+                    block:
+                        - - \[
+                          - \]
+                        - - $$
+                          - $$
+                    inline:
+                        - - \(
+                          - \)
+        renderer:
+            ## Set to true if you have HTML content inside Markdown
+            unsafe: true
+    tableOfContents:
+        endLevel: 4
+        ordered: true
+        startLevel: 2
+    highlight:
+        noClasses: false
+        codeFences: true
+        guessSyntax: true
+        lineNoStart: 1
+        lineNos: true
+        lineNumbersInTable: true
+        tabWidth: 4
