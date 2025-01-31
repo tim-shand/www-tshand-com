@@ -3,7 +3,7 @@
 Personal blog website to document my IT journey, progress and lessons learned.  
 This is a static site deployed using Hugo and Azure Static Web Apps.  
 
-This is my chosen deployment method ude top the following:
+This is my chosen deployment method due to the following:
 
 - Quick and easy to setup and run.
 - Uses Markdown for blog posts.
