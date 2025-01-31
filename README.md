@@ -5,9 +5,11 @@ This is a static site deployed using Hugo and Azure Static Web Apps.
 
 This is my chosen deployment method due to the following:
 
-- Quick and easy to setup and run.
-- Uses Markdown for blog posts.
-- Can host in Azure Static Web Apps for free.
+- Azure: Familiar with platform already.
+- IaC: Bicep for resource provisioning (Azure native).
+- Hugo: Quick and easy to setup and run.
+  - Uses Markdown for blog posts.
+  - Can host in Azure Static Web Apps for free.
 
 ## Hugo
 
@@ -36,4 +38,13 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 
 echo "theme = 'ananke'" >> hugo.toml
 hugo server
+```
+
+## Bicep
+
+As we are deploying a resource group to contain the project, we need to deploy at the "subscription" scope.  
+To deploy to a subscription, use az deployment sub create:
+
+```azurecli
+az deployment sub create --location <location> --template-file <path-to-bicep>
 ```
