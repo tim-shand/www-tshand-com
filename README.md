@@ -27,7 +27,7 @@ This is my chosen deployment method ude top the following:
 
 Execute the below commands to configure a new Hugo site locally and import a chosen theme:  
 
-```powershell
+```text
 hugo new site my_site
 cd my_site
 git init
