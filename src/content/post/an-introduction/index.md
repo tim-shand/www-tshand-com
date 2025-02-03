@@ -16,7 +16,7 @@ tags:
 Greetings, I'm Tim!  
 
 Born and bred in the deep south of New Zealand.  
-An IT engineer, outdoor enthusiast, expert sandwich maker and consumer of hot sauce.  
+An IT engineer, outdoor enthusiast, amateur sandwich connoisseur, and consumer of hot sauce.  
 I enjoy mucking about with computers, writing code and learning about new developments in the tech industry.  
 
 ---
@@ -27,10 +27,9 @@ After working in the IT industry for over a decade, I've found myself reaching a
 
 Discovering Infrastructure-as-Code was a huge boost for me, as I love the idea of being able to "deploy and destroy" easily in my own home environment using what is essentially, a recipe.  
 
-This is how I initially became interested in DevOps and Cloud Engineering.  
+This is how I initially became interested in **DevOps** and **Cloud Engineering**.  
 
-As a result of my new found passion, I have made the decision to change focus and pivot.  
-Thankfully, I have existing IT experience to aid me in this transition, for which I am incredibly grateful.  In order to create the change I want, I need to take action.  
+As a result of my new found passion, I have made the decision to change focus and pivot. Thankfully, I have existing IT experience to aid me in this transition, for which I am incredibly grateful. However, in order to create the change that I seek, the ball is now in my court to make that happen.  
 
 > *"Action is the foundational key to all success" - Pablo Picasso*
 
@@ -49,10 +48,9 @@ While carrying out some research on "how to get started", I came across a term t
 **"Building in public"**  
 
 The idea of developing an idea/product/methods publicly early on, and building an audience to follow along with it.  
-I found that this way of thinking can also be applied to learning.  
+I found that this way of thinking can also be applied to learning. Perhaps there is value in sharing my own journey, discoveries, failures and achievements.  
 
-Perhaps there is value in sharing my own journey, discoveries, failures and achievements.  
-Hence the creation of this blog - not only for my own benefit, but hopefully for others as well.  
+Hence the creation of this blog. I hope that others can also obtain value from my experiences.  
 
 > *"The secret of getting ahead is getting started" - Mark Twain*
 
@@ -60,7 +58,7 @@ Hence the creation of this blog - not only for my own benefit, but hopefully for
 
 ## Next Steps
 
-I'm excited and optimistic about where I'm heading. I'm currently taking a [DevOps Bootcamp](https://www.udemy.com/course/the-complete-devops-bootcamp/) course on Udemy by [Kode Kloud](https://kodekloud.com/) to get myself up to date with terminology and concepts. Having previous experience with Azure, I aim to pursue courses related to that also. From there, the plan is to go deep into containerization, Kubernetes and cloud architectures.  
+I'm excited and optimistic about where I'm heading. I'm currently taking a [DevOps Bootcamp](https://www.udemy.com/course/the-complete-devops-bootcamp/) course on Udemy by [Kode Kloud](https://kodekloud.com/) to get myself up to date with terminology and concepts. Having previous experience with Azure, I aim to pursue courses and certifications to help be better understand, and specialize in that area. From there, the plan is to go deep into containerization, Kubernetes and cloud architectures.  
 
 Onwards and upwards!  
 

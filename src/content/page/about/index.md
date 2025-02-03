@@ -16,9 +16,9 @@ An avid IT professional and enthusiast, currently working as a Systems Engineer 
 
 It was MS-DOS where I found my love for computers. As a kid, my Dad would bring home old PCs from his work for me to mess about with. Countless re-installs and upgrades soon followed.  
 
-Now, with over a decade of experience in engineering and support roles, I have decided to focus my career ambitions towards DevOps, Cloud Platforms and development. This site, and future blog posts will serve as way for me to document my learning journey, and hopefully provide some value for others along the way.  
+Now, with over a decade of experience in engineering and support roles, I have decided to focus my career ambitions towards DevOps, Cloud Platforms and development. This site, and future blog posts will serve as a way for me to document my learning journey, and hopefully provide some value for others along the way.  
 
-I really enjoy working with automation, monitoring platforms, and getting stuck into some code.  
+I really enjoy working with automation, monitoring platforms, and getting stuck into some juicy code.  
 It's a real blessing when your profession can also be your hobby.  
 
 ---
@@ -30,7 +30,7 @@ I'm pretty keen on the outdoors, enjoy getting out and about, and exploring new 
 The cold doesn't bother me, in fact I prefer it (accompanied by high altitude for bonus points).  
 That being said, I also frequent the coast for a bit of fishing (although my catch-rate could do with some improvement).  
 
-I'm also pretty handy on the tools, working on cars, motorbikes and general small engine related issues.  
+I'm also pretty handy on the tools, fixing up cars, old motorbikes and other general mechanical related repairs.  
 
 ---
 
