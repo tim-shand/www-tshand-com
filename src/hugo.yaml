@@ -5,8 +5,8 @@ title: Tim Shand
 copyright: Tim Shand
 services:
     # GA Tracking ID
-    googleAnalytics:
-        id:
+    #googleAnalytics:
+    #    id:
 pagination:
     pagerSize: 3
 colorScheme:
@@ -30,7 +30,8 @@ params:
     enableEmoji: true
     sidebar:
         #emoji:
-        subtitle: IT, Tech, DevOps & Cloud
+        subtitle: Blog and Portfolio
+        subtitle2: IT | Tech | DevOps | Cloud
         avatar:
             enabled: true
             local: true
@@ -80,6 +81,11 @@ menu:
           url: https://www.linkedin.com/in/tshandnz
           params:
               icon: brand-linkedin
+        - identifier: x
+          name: X
+          url: https://x.com/_TimShand
+          params:
+              icon: brand-x
 related:
     includeNewer: true
     threshold: 60
@@ -87,7 +93,6 @@ related:
     indices:
         - name: tags
           weight: 100
-
         - name: categories
           weight: 200
 markup:
