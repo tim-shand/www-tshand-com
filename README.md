@@ -37,8 +37,10 @@ git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 
 echo "theme = 'ananke'" >> hugo.toml
-hugo server -s ./src
 ```
+
+Run the server, using the `-c` parameter to specify the source directory.  
+`hugo server -s ./src`  
 
 ## Bicep
 
