@@ -19,10 +19,10 @@ This is my chosen deployment method due to the following:
 
 1. Open a terminal window and execute the below command:  
 `winget install Hugo.Hugo.Extended`  
-2. Accept the source agreement terms (Y) and press enter.  
+2. Accept the agreement terms (Y) and press enter.  
 3. After installation, the PATH environment variable will have been modified.  
-4. To begin using Hugo, close and re-open the terminal window.  
-5. Confirm Hugo is install by executing the below command:  
+4. To start using Hugo, close and re-open the terminal window (due to PATH update).  
+5. Verify that Hugo is installed by executing the below command:  
 `hugo version`
 
 ### Initial Setup
