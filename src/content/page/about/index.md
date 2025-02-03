@@ -25,7 +25,7 @@ It's a real blessing when your profession can also be your hobby.
 
 ## When I'm Not Doing IT Stuff?
 
-I'm pretty keen on the outdoors, enjoy getting out and about, and exploring new places.  
+I am keen on the outdoors, enjoy getting out and about when I can, and exploring remote places.  
 
 The cold doesn't bother me, in fact I prefer it (accompanied by high altitude for bonus points).  
 That being said, I also frequent the coast for a bit of fishing (although my catch-rate could do with some improvement).  
