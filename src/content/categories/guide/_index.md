@@ -4,6 +4,6 @@ description: ""
 slug: "guide"
 image: "glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg"
 style:
-    background: "#2a9d8f"
+    background: "#FF9914"
     color: "#fff"
 ---

@@ -3,6 +3,7 @@ title: About
 reading_time: false
 description: Greetings, I'm Tim 👋
 image: "profile-image-01.jpg"
+draft: false
 menu:
     main: 
         weight: -90
