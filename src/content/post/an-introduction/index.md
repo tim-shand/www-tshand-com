@@ -23,15 +23,14 @@ I enjoy mucking about with computers, writing code and learning about new develo
 
 ## Where I'm At
 
-After working in the IT industry for over a decade, I've found myself reaching a point in my career where I'm ready for a new set of challenges. In response to this, I started looking into other areas where my interests align.
+After working in the IT industry for over a decade, I've found myself reaching a point in my career where I'm ready for a new set of challenges. In response to this, I began looking into other areas where my interests align.
 
 Discovering Infrastructure-as-Code was a huge boost for me, as I love the idea of being able to "deploy and destroy" easily in my own home environment using what is essentially, a recipe.  
 
-This is how I *initially* became interested in DevOps and Cloud Engineering.  
+This is how I initially became interested in DevOps and Cloud Engineering.  
 
-As a result of my new found passion, I have made the decision to change focus and pivot.  
-Thankfully, I have existing IT experience to aid me in this transition, for which I am incredibly grateful.  
-In order to create change, I need to take action.  
+As a result of my new found passion, I have made the decision to change focus and pivot.  
+Thankfully, I have existing IT experience to aid me in this transition, for which I am incredibly grateful.  In order to create the change I want, I need to take action.  
 
 > *"Action is the foundational key to all success" - Pablo Picasso*
 
@@ -61,7 +60,7 @@ Hence the creation of this blog - not only for my own benefit, but hopefully for
 
 ## Next Steps
 
-I'm very excited and optimistic about where I'm heading. I'm currently taking a [DevOps Bootcamp](https://www.udemy.com/course/the-complete-devops-bootcamp/) course on Udemy by [Kode Kloud](https://kodekloud.com/) to get myself up to date with terminology and concepts. Having existing experience with Azure, I aim to pursue courses related to that also. From there, the plan is to go deep into containerization, Kubernetes and cloud architectures.  
+I'm excited and optimistic about where I'm heading. I'm currently taking a [DevOps Bootcamp](https://www.udemy.com/course/the-complete-devops-bootcamp/) course on Udemy by [Kode Kloud](https://kodekloud.com/) to get myself up to date with terminology and concepts. Having previous experience with Azure, I aim to pursue courses related to that also. From there, the plan is to go deep into containerization, Kubernetes and cloud architectures.  
 
 Onwards and upwards!  
 
