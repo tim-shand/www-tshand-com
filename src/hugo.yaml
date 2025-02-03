@@ -30,19 +30,17 @@ params:
     enableEmoji: true
     sidebar:
         #emoji:
-        subtitle: Hi, I'm Tim!
+        subtitle: IT, Tech, DevOps & Cloud
         avatar:
             enabled: true
             local: true
-            #src: img/logo_800x800.png
-            #src: img/logo-no-background.png
             src: img/logo-color.png
     article:
         math: false
         toc: true
         readingTime: true
         license:
-            enabled: false
+            enabled: true
             default: Licensed under CC BY-NC-SA 4.0
     comments:
         enabled: false

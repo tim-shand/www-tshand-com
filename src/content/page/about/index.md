@@ -4,6 +4,7 @@ reading_time: false
 description: Greetings, I'm Tim 👋
 image: "profile-image-01.jpg"
 draft: false
+license: CC BY-NC-ND
 menu:
     main: 
         weight: -90
@@ -40,3 +41,5 @@ I'm also pretty handy on the tools, fixing up cars, old motorbikes and other gen
 *"If you tell the truth, you don't have to remember anything"* - Mark Twain  
 *"The secret of getting ahead is getting started"* - Mark Twain  
 *"Continuous improvement is better than delayed perfection"* - Mark Twain  
+
+---
