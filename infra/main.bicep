@@ -2,9 +2,9 @@
 targetScope = 'subscription'
 
 // Variables/Paramters
-//param location string ='australiaeast' // Unable to use this region for this service.
 
-// westus2 has the lowest latency.
+// Azure Static Apps restricted to specific regions.
+// westus2 has the lowest latency (https://www.azurespeed.com/Azure/Latency). 
 @allowed([ 'centralus', 'eastus2', 'eastasia', 'westeurope', 'westus2' ])
 param location string = 'westus2'
 
