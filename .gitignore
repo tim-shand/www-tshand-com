@@ -1,7 +1,8 @@
 # Generated files by hugo
+public/
 /public/
-/src/public/
-/resources/_gen/
+resources/
+_gen/
 /assets/jsconfig.json
 hugo_stats.json
 hugo.log
