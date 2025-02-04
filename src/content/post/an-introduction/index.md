@@ -6,9 +6,6 @@ description: Who I am, where I came from, and where I'm going. The start of a ne
 image: maxime-horlaville-CSWllKT9wPw-unsplash.jpg
 categories:
     - article
-    - review
-    - knowledgebase
-    - guide
 tags:
     - personal
     - career
