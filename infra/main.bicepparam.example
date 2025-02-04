@@ -1,0 +1,22 @@
+using 'main.bicep'
+
+// General
+param rgName = 'my-resourcegroupname'
+param location = 'westus2'
+param tags = {
+  CreatedBy: 'bicep'
+  Environment: 'dev'
+  Project: 'my-webapp'
+}
+// Web App
+param repoProvider = 'Github'
+param repoToken = ''
+param repoUrl = 'https://github.com/my-repo/repo'
+param repoBranch = 'main'
+param webAppName = 'webapp1'
+param skuName = 'free'
+param skuTier = 'free'
+param appLocation = '/src'
+param apiLocation = ''
+param appArtifactLocation = 'public'
+param enterpriseGradeCdnStatus= 'disabled'
