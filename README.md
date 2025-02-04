@@ -48,5 +48,10 @@ As we are deploying a resource group to contain the project, we need to deploy a
 To deploy to a subscription, use az deployment sub create:
 
 ```azurecli
-az deployment sub create --location <location> --template-file <path-to-bicep>
+# Syntax:
+az deployment sub create --location <location> --template-file <path-to-bicep> --parameters <path-to-params>
+
+# Example:
+az deployment sub create --location westus2 --template-file .\infra\main.bicep --parameters .\infra\main.bicepparam
+
 ```

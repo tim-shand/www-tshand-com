@@ -1,46 +1,52 @@
-
-// Resource Group 
-// Resource (Microsoft.Resources/resourceGroups) has to be deployed at the subscription scope. 
-// Since the scope of the bicep file is subscription as well, we can deploy resource group in the main file.
-
-// Storage account resource has to be deployed at the resourceGroup scope. 
-// Therefore, we need to use modules to deploy it at a scope different from the main file.
-
 // Scoped to subscription.
 targetScope = 'subscription'
 
 // Variables/Parameters
+// -- Azure Static Web Apps restricted to specific regions.
+// -- westus2 has the lowest latency (https://www.azurespeed.com/Azure/Latency). 
+@allowed(['centralus', 'eastus2', 'eastasia', 'westeurope', 'westus2'])
+param location string
+param rgName string
+param tags object
 
-// Azure Static Apps restricted to specific regions.
-// westus2 has the lowest latency (https://www.azurespeed.com/Azure/Latency). 
-@allowed([ 'centralus', 'eastus2', 'eastasia', 'westeurope', 'westus2' ])
-param location string = 'westus2'
+// Static Web App: Parameters
+param repoProvider string
+@secure()
+param repoToken string
+param repoUrl string
+param repoBranch string
+param webAppName string
+param skuName string
+param skuTier string
+param appLocation string
+param apiLocation string
+param appArtifactLocation string
+param enterpriseGradeCdnStatus string
 
+//----------------------------------------------//
 // Create Resource Group
-@description('Create a resource group')
-resource rg 'Microsoft.Resources/resourceGroups@2024-03-01' = {
-  name: 'tjs-prd-tshandcom-rg'
+@description('Create a resource group for project.')
+resource rg 'Microsoft.Resources/resourceGroups@2024-11-01' = {
+  name: rgName
   location: location
+  tags: tags
 }
 
-// Create Static Web App
-@description('Create a static web app')
-module swa 'br/public:avm/res/web/static-site:0.3.0' = {
-  name: 'client'
-  scope: rg
+module swa 'static-web-app.bicep' = {
+  scope: resourceGroup(rg.name)
+  name: webAppName
   params: {
-    name: 'tjs-prd-tshandcom-swa'
     location: location
-    sku: 'Free'
+    skuName: skuName
+    skuTier: skuTier
+    appName: webAppName
+    repoBranch: repoBranch
+    repoProvider: repoProvider
+    repoUrl: repoUrl
+    repoToken: repoToken
+    apiLocation: apiLocation
+    appArtifactLocation: appArtifactLocation
+    appLocation: appLocation
+    enterpriseGradeCdnStatus: enterpriseGradeCdnStatus
   }
 }
-
-module swa2 'Microsoft.Web/staticSites@2024-04-01' = {
-}
-
-// Outputs
-@description('Output the default hostname')
-output endpoint string = swa.outputs.defaultHostname
-
-@description('Output the static web app name')
-output staticWebAppName string = swa.outputs.name
