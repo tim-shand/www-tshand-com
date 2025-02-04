@@ -5,9 +5,16 @@ This is a static site deployed using Hugo and Azure Static Web Apps.
 
 This is my chosen deployment method due to the following:
 
-- Azure: Familiar with platform already.
-- IaC: Bicep for resource provisioning (Azure native).
-- Hugo: Quick and easy to setup and run.
+- **Azure:**
+  - Existing knowledge and experience with the cloud service provider.
+  - Free tier offering for Static Web Apps.
+  - Built-in integration options for Github.
+- **IaC:**
+  - Bicep for cloud resource provisioning.
+  - Domain-specific language (DSL) for Azure.
+  - Azure native langugage with excellent support for new features.
+- **Hugo:**
+  - Quick and easy to setup and run.
   - Uses Markdown for blog posts.
   - Can host in Azure Static Web Apps for free.
 
@@ -43,6 +50,8 @@ Run the server, using the `-c` parameter to specify the source directory.
 `hugo server -s ./src`  
 
 ## Bicep
+
+Using a main Bicep file to provision the initial Resource Group, and a module file for the Static Web App.  
 
 As we are deploying a resource group to contain the project, we need to deploy at the "subscription" scope.  
 To deploy to a subscription, use az deployment sub create:
