@@ -25,7 +25,7 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: Build Hugo Site
-        run: hugo ./src --minify
+        run: hugo -s ./src --minify
       - name: Deploy to Azure
         uses: Azure/static-web-apps-deploy@v1
         with:
