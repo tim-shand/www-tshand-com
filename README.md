@@ -24,7 +24,7 @@ Doing so will trigger a Github Actions workflow to build and deploy the site int
 
 ## Hugo
 
-### Installation
+### Installation & Setup
 
 #### Windows
 
@@ -35,30 +35,25 @@ Doing so will trigger a Github Actions workflow to build and deploy the site int
 4. To start using Hugo, close and re-open the terminal window (due to PATH update).  
 5. Verify that Hugo is installed by executing the below command:  
 `hugo version`
-
-### Initial Setup
-
-Execute the below commands to configure a new Hugo site locally and import a chosen theme:  
-
+6. Execute the below commands to configure a new Hugo site locally and import a chosen theme:  
 ```text
 hugo new site my_site
 cd my_site
 git init
-
-git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-
-echo "theme = 'ananke'" >> hugo.toml
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke"
 ```
-
-Run the server locally, using the `-c` parameter to specify the source directory.  
+7. Add line to top of 'hugo.yaml. file:
+```
+theme: hugo-theme-stack-master
+```
+8. To run the server locally (for development), use the `-c` parameter to specify the source directory.  
 `hugo server -s ./src`  
 
 ## Bicep
 
-Using a main Bicep file to provision the initial Resource Group, and a module file for the Static Web App.  
-
-As we are deploying a resource group to contain the project, we need to deploy it at the "subscription" scope.  
-To deploy to a subscription, use az deployment sub create:
+- Using a main Bicep file to provision the initial Resource Group, and a module file for the Static Web App.  
+- As we are deploying a resource group to contain the project, we need to deploy it at the "subscription" scope.  
+- To deploy to a subscription, use az deployment sub create:
 
 ```azurecli
 # Syntax:
