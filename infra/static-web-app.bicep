@@ -4,6 +4,7 @@ param appName string
 param repoUrl string
 param repoBranch string
 param repoProvider string
+param tags object
 @secure()
 param repoToken string
 param skuName string
@@ -35,4 +36,5 @@ resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
     enterpriseGradeCdnStatus: enterpriseGradeCdnStatus
     allowConfigFileUpdates: true
   }
+  tags: tags
 }

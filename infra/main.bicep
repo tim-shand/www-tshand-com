@@ -48,5 +48,6 @@ module swa 'static-web-app.bicep' = {
     appArtifactLocation: appArtifactLocation
     appLocation: appLocation
     enterpriseGradeCdnStatus: enterpriseGradeCdnStatus
+    tags: tags
   }
 }
