@@ -1,19 +1,20 @@
 using 'main.bicep'
 
 // General
-param rgName = 'my-resourcegroup-name'
+param global_env = 'dev'
+param global_prefix = 'my-webapp'
 param location = 'westus2'
 param tags = {
   CreatedBy: 'bicep'
-  Environment: 'dev'
+  Environment: global_env
   Project: 'my-webapp'
 }
+
 // Web App
 param repoProvider = 'Github' // Devops
-param repoToken = '' // Token used for deployment.
+param repoToken = '12345' // Token used for deployment.
 param repoUrl = 'https://github.com/my-repo/repo'
 param repoBranch = 'main'
-param webAppName = 'webapp1'
 param skuName = 'free'
 param skuTier = 'free'
 param appLocation = '/src'

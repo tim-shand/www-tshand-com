@@ -36,17 +36,22 @@ Doing so will trigger a Github Actions workflow to build and deploy the site int
 5. Verify that Hugo is installed by executing the below command:  
 `hugo version`
 6. Execute the below commands to configure a new Hugo site locally and import a chosen theme:  
+
 ```text
 hugo new site my_site
 cd my_site
 git init
 git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke"
 ```
+
 7. Add line to top of 'hugo.yaml. file:
-```
+
+```text
 theme: hugo-theme-stack-master
 ```
-8. To run the server locally (for development), use the `-c` parameter to specify the source directory.  
+
+8. To run the server locally (for development), use the `-c` parameter to specify the source directory. 
+
 `hugo server -s ./src`  
 
 ## Bicep
