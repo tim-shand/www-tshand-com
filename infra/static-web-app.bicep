@@ -38,3 +38,10 @@ resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
   }
   tags: tags
 }
+
+// Add Custom DNS to Static Site
+resource customDomainName 'Microsoft.Web/staticSites/customDomains@2024-04-01' = {
+  name: 'www.tshand.com'
+  parent: staticWebApp
+  kind: 'CNAME'
+}
