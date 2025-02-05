@@ -1,22 +1,26 @@
 # Personal Portfolio/Blog Website (tshand.com)
 
 Personal blog website to document my IT journey, progress and lessons learned.  
-This is a static site deployed using Hugo and Azure Static Web Apps.  
+This is a static site deployed using Hugo, Azure Static Web Apps and Github Actions.  
+Using this style of site generation allows me to create markdown files and push them to this repo.  
+Doing so will trigger a Github Actions workflow to build and deploy the site into Azure.  
 
-This is my chosen deployment method due to the following:
+## Infrastructure and Tools
 
 - **Azure:**
-  - Existing knowledge and experience with the cloud service provider.
+  - Existing knowledge and experience with this cloud service provider.
   - Free tier offering for Static Web Apps.
   - Built-in integration options for Github.
-- **IaC:**
-  - Bicep for cloud resource provisioning.
-  - Domain-specific language (DSL) for Azure.
-  - Azure native langugage with excellent support for new features.
+- **Bicep**
+  - Infra-as-Code for Azure resource provisioning.
+  - Domain-specific language (DSL) for Azure, with excellent support for new features.
+  - No need to maintain a state file (like Terraform) as it's built into Azure.
 - **Hugo:**
-  - Quick and easy to setup and run.
-  - Uses Markdown for blog posts.
-  - Can host in Azure Static Web Apps for free.
+  - Static site generator, uses Markdown files for blog posts.
+  - Free, simple to setup and run.
+- **Github Actions:**
+  - New code commits trigger static site rebuild.
+  - Easily integrated into Bicep module for IaC deployment.
 
 ## Hugo
 
@@ -46,14 +50,14 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 echo "theme = 'ananke'" >> hugo.toml
 ```
 
-Run the server, using the `-c` parameter to specify the source directory.  
+Run the server locally, using the `-c` parameter to specify the source directory.  
 `hugo server -s ./src`  
 
 ## Bicep
 
 Using a main Bicep file to provision the initial Resource Group, and a module file for the Static Web App.  
 
-As we are deploying a resource group to contain the project, we need to deploy at the "subscription" scope.  
+As we are deploying a resource group to contain the project, we need to deploy it at the "subscription" scope.  
 To deploy to a subscription, use az deployment sub create:
 
 ```azurecli
