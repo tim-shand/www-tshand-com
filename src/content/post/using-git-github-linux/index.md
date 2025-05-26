@@ -22,7 +22,7 @@ For more information on Git and how it is used, check out the [Github documentat
 
 ### 3 Reasons To Use Git
 
-1. **Version Control and Collaboration**
+#### 1. Version Control and Collaboration
 
 Git enables developers to track every change in a code base, including configuration files, and infrastructure as code (IaC). 
 This is important in relation to DevOps for:
@@ -34,7 +34,7 @@ This is important in relation to DevOps for:
 - **Team Involvement** 
   - Multiple developers and other cross-team members (testers, IT Ops) can work on the same code base without overwriting the work done by someone else, using Git features such as pull requests, branches and merging of changes. 
 
-2. **Automation and CI/CD Integration**
+#### 2. Automation and CI/CD Integration
 
 Git integrates with CI/CD tools such as Jenkins, Azure DevOps, GitHub Actions, and GitLab CI. This enables:
 
@@ -42,7 +42,7 @@ Git integrates with CI/CD tools such as Jenkins, Azure DevOps, GitHub Actions, a
 - Triggering pipelines on pull requests or branch merges
 - Infrastructure provisioning using GitOps practices
 
-3. **Infrastructure as Code (IaC)**
+#### 3. Infrastructure as Code (IaC)
 
 Git is commonly used to manage Terraform, Ansible, Helm, and other IaC tools. 
 These tools allow engineers to utilize a declarative software-defined approach to infrastructure deployments. This helps with:
