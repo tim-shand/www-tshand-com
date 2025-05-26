@@ -11,19 +11,24 @@ tags:
     - linux
 ---
 
-## Getting Started
+## Introducing Git
 
-This guide serves to provide a base for getting started using Git on Linux with remote repositories located in GitHub. 
-Git is an important tool for those working in, or interested in DevOps and software development.  
+This guide serves to provide a base for getting started using Git on Linux with remote repositories located in GitHub. Git is an important tool for those working in, or interested in DevOps and software development.  
 
-Git provides a version control system for code, providing developers and engineers the ability to store code, and review the history of a project. 
+Git provides a version control system for code, providing developers and engineers the ability to store code, and review the history of a project. For more information on Git and how it is used, check out the [Github documentation](https://docs.github.com/en/get-started/using-git/about-git). 
 
-For more information on Git and how it is used, check out the [Github documentation](https://docs.github.com/en/get-started/using-git/about-git). 
+### Concepts
 
-### 3 Reasons To Use Git
+#### Git
+A version control system that helps developers and engineers track changes in their code over time. It allows you to save snapshots of your work (commits), so you can review, undo, or compare changes. Git is useful when working within a team as it supports collaboration by letting multiple people work on the same project without interfering with each other’s changes. 
 
-#### 1. Version Control and Collaboration
+#### Repository (repo)
+This is where the project's files and history are stored. Think of it as a folder that not only contains your code but also an audit trail of every change made. Repositories can be stored locally or hosted online (GitHub or GitLab) so others can access and contribute to the project. With Git, you can create branches in a repository to test new features or fix bugs without affecting the main code until you're ready to merge it in.
 
+
+### Reasons To Use Git
+
+**1. Version Control and Collaboration**  
 Git enables developers to track every change in a code base, including configuration files, and infrastructure as code (IaC). 
 This is important in relation to DevOps for:
 
@@ -34,16 +39,14 @@ This is important in relation to DevOps for:
 - **Team Involvement** 
   - Multiple developers and other cross-team members (testers, IT Ops) can work on the same code base without overwriting the work done by someone else, using Git features such as pull requests, branches and merging of changes. 
 
-#### 2. Automation and CI/CD Integration
-
+**2. Automation and CI/CD Integration**  
 Git integrates with CI/CD tools such as Jenkins, Azure DevOps, GitHub Actions, and GitLab CI. This enables:
 
 - Automatic testing and deployment of code on commits
 - Triggering pipelines on pull requests or branch merges
 - Infrastructure provisioning using GitOps practices
 
-#### 3. Infrastructure as Code (IaC)
-
+**3. Infrastructure as Code (IaC)**  
 Git is commonly used to manage Terraform, Ansible, Helm, and other IaC tools. 
 These tools allow engineers to utilize a declarative software-defined approach to infrastructure deployments. This helps with:
 
