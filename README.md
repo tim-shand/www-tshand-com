@@ -19,17 +19,20 @@ Doing so will trigger a Github Actions workflow to build and deploy the site int
   - Static site generator, uses Markdown files for blog posts.
   - Free, simple to setup and run.
 - **Github Actions:**
-  - New code commits trigger static site rebuild.
+  - New code commits trigger Hugo and Azure static site rebuild.
   - Easily integrated into Bicep module for IaC deployment.
 
 ## Hugo
 
 ### Installation & Setup
 
-#### Windows
+Review the [official vendor documentation](https://gohugo.io/installation/) for more information.  
 
 1. Open a terminal window and execute the below command:  
-`winget install Hugo.Hugo.Extended`  
+**Windows:** `winget install Hugo.Hugo.Extended`  
+**Ubuntu/Debian:** `sudo apt install hugo`  
+**Fedora/CentOS:** `dnf install hugo`  
+
 2. Accept the agreement terms (Y) and press enter.  
 3. After installation, the PATH environment variable will have been modified.  
 4. To start using Hugo, close and re-open the terminal window (due to PATH update).  
@@ -37,7 +40,7 @@ Doing so will trigger a Github Actions workflow to build and deploy the site int
 `hugo version`
 6. Execute the below commands to configure a new Hugo site locally and import a chosen theme:  
 
-```text
+```bash
 hugo new site my_site
 cd my_site
 git init
@@ -46,7 +49,7 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 
 7. Add line to top of 'hugo.yaml. file:
 
-```text
+```yaml
 theme: hugo-theme-stack-master
 ```
 
@@ -58,9 +61,9 @@ theme: hugo-theme-stack-master
 
 - Using a main Bicep file to provision the initial Resource Group, and a module file for the Static Web App.  
 - As we are deploying a resource group to contain the project, we need to deploy it at the "subscription" scope.  
-- To deploy to a subscription, use az deployment sub create:
+- To deploy to a subscription, use the `az deployment sub create` command:
 
-```azurecli
+```bash
 # Syntax:
 az deployment sub create --location <location> --template-file <path-to-bicep> --parameters <path-to-params>
 
