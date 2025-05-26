@@ -321,13 +321,20 @@ git commit -m "fix: repaired hugo base url causing issues with redirects."
 
 6. Create pull request.
 ```bash
-gh pr create --base main --head dev/my-feature --title "Add my new feature" --body "Detailed description of changes"
+gh pr create --base main --head bugfix/hugo-baseurl --title "Bugfix: Hugo Base URL Issues" --body "This fix replaces the 'baseUrl' variable in the 'hugo.yaml' configuration file. This was missing the required 'www.' prefix, necessary when using Cloudflare DNS with Azure Static Webapp. The ability to use root domain is problematic."
 ```
 
+7. Merge the Pull Request (after review/approval).
+`gh pr merge bugfix/hugo-baseurl --merge`  
 
+8. Delete the development branch after merging into main. 
+```bash
+# Delete local branch
+git branch -d bugfix/hugo-baseurl
 
-
-
+# Delete remote branch
+git push origin --delete bugfix/hugo-baseurl
+```
 
 ---
 
