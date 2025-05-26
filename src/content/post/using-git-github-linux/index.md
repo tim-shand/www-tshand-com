@@ -31,7 +31,7 @@ In Git, a 'branch' is a separate workspace or a copy of a project where changes 
 
 When done working on a branch, you can 'merge' it back into the main branch. This makes it easy to work on different parts of a project at the same time, and then combine everything together when it's ready for production.
 
-##### Branch Naming Conventions
+#### Branch Naming Conventions
 
 **bugfix**  
 - Used to fix minor bugs or issues in the code.
@@ -81,6 +81,8 @@ These tools allow engineers to utilize a declarative software-defined approach t
 - Ensuring repeatable and consistent environment delpoyments
 - Controlled deployment of infrastructure alongside application code
 
+---
+
 ## Requirements
 
 - **An active Github account**
@@ -89,6 +91,8 @@ These tools allow engineers to utilize a declarative software-defined approach t
   - This can be a local or virtual machine, remote server or WSL on Windows. 
 - **Basic familiarity with terminal use**
   - Either in Windows or Linux, basic existing knowledge will be helpful. 
+
+---
 
 ## Preparation
 
@@ -154,6 +158,7 @@ Press Enter to open github.com in your browser...
 ✓ Configured git protocol
 ✓ Logged in as test-user
 ```
+---
 
 ## Using Git with Remote GitHub Repositories
 
