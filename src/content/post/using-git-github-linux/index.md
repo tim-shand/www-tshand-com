@@ -2,7 +2,7 @@
 author: Tim Shand
 title: Using Git with GitHub on Linux
 date: 2025-03-20
-description: A guide to using Git with remote Github repositories on Linux.
+description: Guide to using Git with remote Github repositories on Linux.
 image: luca-bravo-XJXWbfSo2f0-unsplash_medium.jpg
 categories:
     - guide
@@ -11,18 +11,60 @@ tags:
     - linux
 ---
 
-## Introduction
+## Getting Started
 
-This guide serves to provide a base for getting started with using Git on Linux with remote repositories in GitHub. 
-Git is an important tool for those interested in DevOps or software developemnt.  
+This guide serves to provide a base for getting started using Git on Linux with remote repositories located in GitHub. 
+Git is an important tool for those working in, or interested in DevOps and software development.  
 
-For a quick "cheat sheet" on common Git commands, skip to the end of this blog post.  
+Git provides a version control system for code, providing developers and engineers the ability to store code, and review the history of a project. 
+
+For more information on Git and how it is used, check out the [Github documentation](https://docs.github.com/en/get-started/using-git/about-git). 
+
+### 3 Reasons To Use Git
+
+1. **Version Control and Collaboration**
+
+Git enables developers to track every change in a code base, including configuration files, and infrastructure as code (IaC). 
+This is important in relation to DevOps for:
+
+- **Rolling Back Versions** 
+  - If bad code is committed to the main branch, it can be rolled back to a previous version, to time before the problematic code was committed. 
+- **Ensuring traceability and accountability**
+  - Each developer commits changes using their own unique identity, providing transparency on who did what, and when. 
+- **Team Involvement** 
+  - Multiple developers and other cross-team members (testers, IT Ops) can work on the same code base without overwriting the work done by someone else, using Git features such as pull requests, branches and merging of changes. 
+
+2. **Automation and CI/CD Integration**
+
+Git integrates with CI/CD tools such as Jenkins, Azure DevOps, GitHub Actions, and GitLab CI. This enables:
+
+- Automatic testing and deployment of code on commits
+- Triggering pipelines on pull requests or branch merges
+- Infrastructure provisioning using GitOps practices
+
+3. **Infrastructure as Code (IaC)**
+
+Git is commonly used to manage Terraform, Ansible, Helm, and other IaC tools. 
+These tools allow engineers to utilize a declarative software-defined approach to infrastructure deployments. This helps with:
+
+- Allowing for peer-reviews of infrastructure changes
+- Ensuring repeatable and consistent environment delpoyments
+- Controlled deployment of infrastructure alongside application code
+
+## Requirements
+
+- **An active Github account**
+  - Create one for free [here](https://github.com/signup)!
+- **Linux operating system**
+  - This can be a local or virtual machine, remote server or WSL on Windows. 
+- **Basic familiarity with terminal use**
+  - Either in Windows or Linux, basic existing knowledge will be helpful. 
 
 ## Preparation
 
 ### Installing Required Packages
 
-1. Update package repository lists and upgrade installed packages.
+1. Update package repository lists and upgrade installed packages for your chosen Linux distribution.
 
 ```bash
 # Ubuntu, Debian
@@ -32,7 +74,7 @@ sudo apt update && sudo apt upgrade
 sudo dnf upgrade
 ```
 
-2. Install Git and GitHub CLI.
+2. Install the Git and GitHub CLI packages from distribution repository.
 
 ```bash
 # Ubuntu, Debian
@@ -54,7 +96,7 @@ git --version && gh --version
 
 1. Set the global Git user properties.
 
-```
+```bash
 # Set the Git username for all repositories locally.
 git config --global user.name "Test User"
 
@@ -74,8 +116,7 @@ git config --global user.email "testuser@mail.com"
 - How would you like to authenticate GitHub CLI? **Login with a web browser**
 - First copy your one-time code: *** - ***
 
-Output: 
-
+**Output:**
 ```bash 
 Press Enter to open github.com in your browser... 
 ✓ Authentication complete.
@@ -86,9 +127,8 @@ Press Enter to open github.com in your browser...
 
 ## Using Git with Remote GitHub Repositories
 
-### Usage 1: Create new local and remote repositories and push local files.
-
-**Use Case:** New project with no existing files or repositories (starting from scratch). 
+### Scenario 1: Create new local and remote repositories and push local files.
+_**Use Case:** New project with no existing files or repositories (starting from scratch)._ 
 
 This method will initialize Git to use a local Git repository with a newly generated remote repository in GitHub. 
 
@@ -100,17 +140,16 @@ This method will initialize Git to use a local Git repository with a newly gener
 
 3. Follow the prompts provided in the terminal:
 - What would you like to do? **Create a new repository on GitHub from scratch**
-- Repository name **new-repo**
-- Description **Test repo for learning Git.**
-- Visibility **Private**
+- Repository name: **new-repo**
+- Description: **Test repo for learning Git.**
+- Visibility: **Private**
 - Would you like to add a README file? **No**
 - Would you like to add a .gitignore? **No**
 - Would you like to add a license? **No**
-- This will create "new-repo" as a private repository on GitHub. Continue? **Yes**
+- This will create _"new-repo"_ as a private repository on GitHub. Continue? **Yes**
 - Clone the new repository locally? **No**
 
-Output: 
-
+**Output:** 
 ```bash
 ✓ Created repository test-user/new-repo on GitHub
 https://github.com/test-user/new-repo
@@ -134,8 +173,8 @@ echo "# Test Readme File" > README.md
 7. Commit the staged files in the project directory to the local Git repository.  
 `git commit -m "Initial commit"` 
 
-Output: 
-```
+**Output:** 
+```bash
 [main (root-commit) bdc8375] Initial commit.
 1 file changed, 1 insertion(+)
 create mode 100644 README.md
@@ -147,8 +186,8 @@ create mode 100644 README.md
 9. Confirm that the remote repository is configured.  
 `git remote -v` 
 
-Output: 
-```
+**Output:**
+```bash
 origin https://github.com/test-user/new-repo.git (fetch)
 origin https://github.com/test-user/new-repo.git (push)
 ```
@@ -156,9 +195,8 @@ origin https://github.com/test-user/new-repo.git (push)
 10. Push the changes in the local repository to the remote GitHub repository.  
 `git push origin main` 
 
-Output: 
-
-```
+**Output:**
+```bash
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 229 bytes | 229.00 KiB/s, done.
@@ -169,11 +207,10 @@ To https://github.com/test-user/new-repo.git
 
 11. Check the results in GitHub.  
 
-Login to GitHub via web browser to view the new repository and the README.md file. 
+- Login to GitHub via web browser to view the new repository and the README.md file. 
 
-### Usage 2: Pull existing GitHub repository into local project directory. 
-
-**Use Case:** Fresh OS install or operating on another machine without existing project files present. 
+### Scenario 2: Pull existing GitHub repository into local project directory. 
+_**Use Case:** Fresh OS install or operating on another machine without existing project files present._ 
 
 1. Ensure all preparation steps have taken place. 
 2. Create a project directory to pull the remote files into, and change into the directory.  
@@ -192,8 +229,8 @@ Login to GitHub via web browser to view the new repository and the README.md fil
 `git add .`  
 `git commit -m "Updated the README file."`  
 
-Output: 
-```
+**Output:**
+```bash
 [main 7838951] Updated README file.
 1 file changed, 2 insertions(+)
 ```
@@ -201,8 +238,8 @@ Output:
 7. Push the changes to the remote GitHub repository. 
 `git push origin main` 
 
-Output: 
-```
+**Output:** 
+```bash
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
@@ -211,11 +248,15 @@ To https://github.com/test-user/new-repo.git
 bdc8375..7838951 main -> main
 ```
 
-8. Confirm README file is updated in GitHub via web browser. 
+8. Confirm README file is showing updated changes in GitHub via web browser. 
 
-## Git and GitHub Cheat Sheet
+**Complete!**
 
-### 🔧 Git Configuration
+---
+
+## Commands Cheat Sheet
+
+### Git Configuration
 | Command                                            | Purpose             | Example                                             |
 | -------------------------------------------------- | ------------------- | --------------------------------------------------- |
 | `git config --global user.name "Your Name"`        | Set global username | `git config --global user.name "John Doe"`          |
@@ -223,13 +264,13 @@ bdc8375..7838951 main -> main
 | `git config --global core.editor nano`             | Set default editor  | `git config --global core.editor nano`              |
 | `git config --list`                                | View current config | -                                                   |
 
-### 📂 Repository Setup
+### Repository Setup
 | Command           | Purpose             | Example                                      |
 | ----------------- | ------------------- | -------------------------------------------- |
 | `git init`        | Initialize new repo | `git init`                                   |
 | `git clone <url>` | Clone existing repo | `git clone https://github.com/user/repo.git` |
 
-### 📤 Remote Repositories
+### Remote Repositories
 | Command                       | Purpose             | Example                                                  |
 | ----------------------------- | ------------------- | -------------------------------------------------------- |
 | `git remote -v`               | View remotes        | -                                                        |
@@ -237,7 +278,7 @@ bdc8375..7838951 main -> main
 | `git push -u origin main`     | Push + set upstream | -                                                        |
 | `git fetch`                   | Fetch updates       | `git fetch origin`                                       |
 
-### 📄 Basic Workflow
+### Basic Workflow
 | Command                   | Purpose                 | Example                          |
 | ------------------------- | ----------------------- | -------------------------------- |
 | `git status`              | Check changes/status    | `git status`                     |
@@ -247,7 +288,7 @@ bdc8375..7838951 main -> main
 | `git push`                | Push to remote          | `git push origin main`           |
 | `git pull`                | Pull latest from remote | `git pull origin main`           |
 
-### 🔀 Branches
+### Branches
 | Command                  | Purpose            | Example                     |
 | ------------------------ | ------------------ | --------------------------- |
 | `git branch`             | List branches      | `git branch`                |
@@ -257,7 +298,7 @@ bdc8375..7838951 main -> main
 | `git merge <branch>`     | Merge into current | `git merge dev`             |
 | `git branch -d <name>`   | Delete branch      | `git branch -d dev`         |
 
-### 🧰 Undoing Changes
+### Undoing Changes
 | Command                  | Purpose                  | Example                     |
 | ------------------------ | ------------------------ | --------------------------- |
 | `git restore <file>`     | Undo uncommitted change  | `git restore index.html`    |
@@ -265,7 +306,7 @@ bdc8375..7838951 main -> main
 | `git checkout -- <file>` | Discard changes (legacy) | `git checkout -- file.txt`  |
 | `git revert <commit>`    | Revert commit (safe)     | `git revert abc123`         |
 
-### 🔍 Viewing History
+### Viewing History
 | Command             | Purpose              | Example           |
 | ------------------- | -------------------- | ----------------- |
 | `git log`           | View commit history  | `git log`         |
@@ -273,14 +314,14 @@ bdc8375..7838951 main -> main
 | `git diff`          | See unstaged changes | `git diff`        |
 | `git show <commit>` | See specific commit  | `git show abc123` |
 
-### 📦 Tags
+### Tags
 | Command                | Purpose            | Example        |
 | ---------------------- | ------------------ | -------------- |
 | `git tag`              | List tags          | `git tag`      |
 | `git tag v1.0`         | Create tag         | `git tag v1.0` |
 | `git push origin v1.0` | Push tag to GitHub | -              |
 
-### 🗑️ Delete Commits 
+### Delete Commits 
 | Command                   | Purpose                         | Example |
 | ------------------------- | ------------------------------- | ------- |
 | `git reset --soft HEAD~1` | Undo last commit (keep changes) | -       |
@@ -289,3 +330,4 @@ bdc8375..7838951 main -> main
 ---
 
 *Cover photo by [Luca Bravo](https://unsplash.com/@lucabravo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash") on [Unsplash](https://unsplash.com/photos/turned-on-gray-laptop-computer-XJXWbfSo2f0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)*
+
