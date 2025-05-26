@@ -37,5 +37,5 @@ When I'm not tinkering with tech, I'm also pretty handy on the tools.
 Fixing up cars, restoring old motorbikes or building new garden beds.  
 
 Feel free to reach out for chat, or connect with me on [LinkedIn](https://www.linkedin.com/in/tshandnz).  
-
+ 
 ---
