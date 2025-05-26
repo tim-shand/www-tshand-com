@@ -33,25 +33,21 @@ When done working on a branch, you can 'merge' it back into the main branch. Thi
 
 #### Branch Naming Conventions
 
-**bugfix**  
-- Used to fix minor bugs or issues in the code.
-- `bugfix/login-issue-185674`  
-
-**hotfix**  
-- Used for critical fixes in production that need to be applied immediately.
-- `hotfix/CVE-2025-01`  
-
-**feature**  
-- Used for developing new features or enhancements.
-- `feature/login-prompt`  
-
-**release**  
-- Used to prepare a new production release. Allows for final testing and minor bug fixes.
-- `release/1.0.1`  
-
-**docs**  
-- Used to update or create documentation (e.g., README files, wikis, API docs).
-- `docs/update-readme`  
+- **bugfix**  
+  - Used to fix minor bugs or issues in the code.
+  - `bugfix/login-issue-185674`  
+- **hotfix**  
+  - Used for critical fixes in production that need to be applied immediately.
+  - `hotfix/CVE-2025-01`  
+- **feature**  
+  - Used for developing new features or enhancements.
+  - `feature/login-prompt`  
+- **release**  
+  - Used to prepare a new production release. Allows for final testing and minor bug fixes.
+  - `release/1.0.1`  
+- **docs**  
+  - Used to update or create documentation (e.g., README files, wikis, API docs).
+  - `docs/update-readme`  
 
 ### Reasons To Use Git
 
