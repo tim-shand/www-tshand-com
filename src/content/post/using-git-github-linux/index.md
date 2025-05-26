@@ -25,6 +25,33 @@ A version control system that helps developers and engineers track changes in th
 #### Repository (repo)
 This is where the project's files and history are stored. Think of it as a folder that not only contains your code but also an audit trail of every change made. Repositories can be stored locally or hosted online (GitHub or GitLab) so others can access and contribute to the project. With Git, you can create branches in a repository to test new features or fix bugs without affecting the main code until you're ready to merge it in.
 
+#### Branching
+
+In Git, a 'branch' is a separate workspace or a copy of a project where changes can be made without affecting the main version. This allows the testing of new features and fix bugs. The most common branch is called `main` (legacy naming: `master`), which holds the production version of the project.
+
+When done working on a branch, you can 'merge' it back into the main branch. This makes it easy to work on different parts of a project at the same time, and then combine everything together when it's ready for production.
+
+##### Branch Naming Conventions
+
+**bugfix**  
+- Used to fix minor bugs or issues in the code.
+- `bugfix/login-issue-185674`  
+
+**hotfix**  
+- Used for critical fixes in production that need to be applied immediately.
+- `hotfix/CVE-2025-01`  
+
+**feature**  
+- Used for developing new features or enhancements.
+- `feature/login-prompt`  
+
+**release**  
+- Used to prepare a new production release. Allows for final testing and minor bug fixes.
+- `release/1.0.1`  
+
+**docs**  
+- Used to update or create documentation (e.g., README files, wikis, API docs).
+- `docs/update-readme`  
 
 ### Reasons To Use Git
 
@@ -253,7 +280,54 @@ bdc8375..7838951 main -> main
 
 8. Confirm README file is showing updated changes in GitHub via web browser. 
 
-**Complete!**
+### Scenario 3: Create development branch, pull request and merge.
+
+This section describes the steps involved to create a new branch used for development, reating a pull-request and then merging the development branch into the main branch (production). 
+
+1. List all branches for the current repository.
+`git branch -a`  
+
+The below output shows that we are currently using the 'main' branch.  
+**Output:**  
+```bash
+* main
+  remotes/origin/main
+```
+
+2. Create a new branch using a descriptive title.
+`git checkout -b bugfix/hugo-baseurl`  
+
+3. Check the current branch again to ensure we are now using the new 'bugfix' branch.
+`git branch -a`  
+
+**Output:**  
+```bash
+* bugfix/hugo-baseurl
+  main
+  remotes/origin/main
+```
+
+4. Make the required code changes and commit them. 
+```bash
+# Stage changes
+git add .
+
+# Commit changes
+git commit -m "fix: repaired hugo base url causing issues with redirects."
+```
+
+5. Push the new branch to remote repository. 
+`git push -u origin bugfix/hugo-baseurl`  
+
+6. Create pull request.
+```bash
+gh pr create --base main --head dev/my-feature --title "Add my new feature" --body "Detailed description of changes"
+```
+
+
+
+
+
 
 ---
 
