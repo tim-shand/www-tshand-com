@@ -1,9 +1,9 @@
-baseurl: https://tshand.com/
+baseurl: https://www.tshand.com/
 languageCode: en-us
 theme: hugo-theme-stack-master
 title: Tim Shand
 copyright: Tim Shand
-services:
+#services:
     # GA Tracking ID
     #googleAnalytics:
     #    id:
