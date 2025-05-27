@@ -1,7 +1,7 @@
 ---
 title: About
 reading_time: false
-description: Greetings, I'm Tim 👋
+#description: Greetings, I'm Tim 👋
 image: "profile-image-01.jpg"
 draft: false
 license: CC BY-NC-ND
@@ -12,7 +12,7 @@ menu:
             icon: user
 ---
 
-## Who am I?
+## Greetings, I'm Tim 👋
 
 An IT professional and avid tech enthusiast, with over a decade of industry experience.  
 
