@@ -14,28 +14,32 @@ menu:
 
 ## Who am I?
 
-An avid IT professional and tech enthusiast, with over a decade of industry experience.  
+An IT professional and avid tech enthusiast, with over a decade of industry experience.  
 
-I enjoy solving problems, implementing automation solutions, configuring monitoring platforms and working with code. Hence, I have decided to focus my career ambitions towards DevOps and Cloud Engineering. 
+I enjoy designing and implementing automation solutions, configuring monitoring platforms, and working with code. 
+Ultimately, my passion is solving problems and delivering real solutions. 
+Focusing my career ambitions towards DevOps and Cloud Engineering has enabled me to utilize my personal interests as a skill set.  
 
-This site, and future blog posts will serve as a way for me to document my learning journey, hopefully providing some value to others along the way.  
+It was MS-DOS where I found my love for computers. As a kid, my Dad would bring home old PCs from his work for me to mess about with. 
+Countless system re-installs and upgrades soon followed. It's a real blessing when your hobby can also become your profession. 
 
-It was MS-DOS where I found my love for computers. As a kid, my Dad would bring home old PCs from his work for me to mess about with. Countless re-installs and upgrades soon followed.  
-
-It's a real blessing when your profession can also be your hobby.  
+My goal for this site, and future posts is document my learning journey and personal projects. 
+Hopefully it will also provide some value to others along the way. 
 
 ---
 
-## When I'm Not Doing IT Stuff?
+## When I'm Not Doing Conmputer Stuff?
 
-I'm pretty keen on the outdoors and enjoy getting out and about, exploring remote places.  
+I love the outdoors, enjoy getting out and exploring remote places (both by 4WD and hiking).  
 
-The cold doesn't bother me, in fact I prefer it (accompanied by high altitude for bonus points).  
+As a keen skiier, the cold doesn't bother me, in fact I prefer it (accompanied by high altitude for bonus points). 
 That being said, I also frequent the coast for a bit of fishing (although my catch-rate could do with some improvement).  
 
 When I'm not tinkering with tech, I'm also pretty handy on the tools.  
-Fixing up cars, restoring old motorbikes or building new garden beds.  
+Fixing/upgrading cars, restoring old motorbikes or building new garden beds.  
 
 Feel free to reach out for chat, or connect with me on [LinkedIn](https://www.linkedin.com/in/tshandnz).  
- 
+
+Cheers!  
+
 ---
